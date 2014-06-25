@@ -3,13 +3,14 @@
 	<files id="native-toolkit-neko">
 		
 		<compilerflag value="-I${NATIVE_TOOLKIT_PATH}/neko/vm/"/>
+		<compilerflag value="-DNEKO_STANDALONE=1"/>
 		
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/buffer.c"/>
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/date.c"/>
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/file.c"/>
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/init.c"/>
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/int32.c"/>
-		<file name="${NATIVE_TOOLKIT_PATH}/neko/neko/libs/std/math.c"/>
+		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/math.c"/>
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/string.c"/>
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/random.c"/>
 		<file name="${NATIVE_TOOLKIT_PATH}/neko/libs/std/serialize.c"/>

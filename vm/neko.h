@@ -244,12 +244,18 @@ typedef struct _mt_lock mt_lock;
 #undef IMPORT
 #if defined(NEKO_VCC) || defined(NEKO_MINGW)
 #	define INLINE __inline
-#	define EXPORT __declspec( dllexport )
+//#	define EXPORT __declspec( dllexport )
 #	define IMPORT __declspec( dllimport )
 #else
 #	define INLINE inline
-#	define EXPORT
+//#	define EXPORT
 #	define IMPORT
+#endif
+
+#ifdef __GNUC__
+ #define EXPORT __attribute__ ((visibility("default")))
+#else
+ #define EXPORT __declspec(dllexport)
 #endif
 
 #if defined(NEKO_SOURCES) || defined(NEKO_STANDALONE)
